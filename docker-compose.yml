@@ -1,0 +1,11 @@
+version: '3'
+services:
+  ts_discord_notify_ssh:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      - DISCORD_WEBHOOK_URL=https://discord.com/api/webhooks/numbers/more-numbers
+    volumes:
+      - ${PWD}/tsrecorder:/data
+    restart: unless-stopped
