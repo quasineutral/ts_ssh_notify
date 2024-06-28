@@ -4,8 +4,6 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    environment:
-      - DISCORD_WEBHOOK_URL=https://discord.com/api/webhooks/numbers/more-numbers
     volumes:
       - ${PWD}/../tsrecorder:/data
     restart: unless-stopped
