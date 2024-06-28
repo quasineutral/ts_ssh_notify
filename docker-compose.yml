@@ -4,6 +4,9 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
+    # set DISCORD_WEBHOOK_URL in .env file
+    environment:
+      - DISCORD_WEBHOOK_URL=${DISCORD_WEBHOOK_URL}
     volumes:
       - ${PWD}/../tsrecorder:/data
     restart: unless-stopped
